@@ -12,6 +12,3 @@ const numero1 = parseInt(prompt("Digite o primeiro numero: "))
 const numero2 = parseInt(prompt("Digite o segundo numero: "))
 
 console.log(numero1 + numero2)
-
-
-

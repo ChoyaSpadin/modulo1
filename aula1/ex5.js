@@ -14,23 +14,17 @@ const nota1 = parseInt((prompt("Digite a primeira nota:")))
 const nota2 = parseInt((prompt("Digite a segunda nota:")))
 const nota3 = parseInt((prompt("Digite a terceira nota:")))
 
-media = (nota1 + nota2 + nota3)/3 ;
+media = (nota1 + nota2 + nota3) / 3;
 
 console.log("Sua média é:" + media.toFixed(2))
 
-if ( media >= 6 )
-{
-    console.log ("Aprovado");
+if (media >= 6) {
+    console.log("Aprovado");
 
-}
-else
-{
-    if ( media <= 5 )
-    {
+} else {
+    if (media <= 5) {
         console.log("Reprovado");
-    }
-    else
-    {
-        console.log ("Recuperação");
+    } else {
+        console.log("Recuperação");
     }
 }
