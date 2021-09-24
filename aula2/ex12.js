@@ -7,3 +7,5 @@
 //  Percentual do reajuste = 31%
 //  Valor do aluguel reajustado = R$1310,00
 
+
+

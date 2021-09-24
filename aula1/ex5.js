@@ -10,9 +10,9 @@
 
 const prompt = require("prompt-sync")()
 
-const nota1 = parseInt((prompt("Digite a primeira nota:")))
-const nota2 = parseInt((prompt("Digite a segunda nota:")))
-const nota3 = parseInt((prompt("Digite a terceira nota:")))
+const nota1 = +(prompt("Digite a primeira nota:"))
+const nota2 = +(prompt("Digite a segunda nota:"))
+const nota3 = +(prompt("Digite a terceira nota:"))
 
 media = (nota1 + nota2 + nota3) / 3;
 
