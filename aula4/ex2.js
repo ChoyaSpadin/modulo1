@@ -12,11 +12,11 @@ const random = Math.floor(Math.random() * 10) + 1;
 let number = +prompt('Adivinhe um numero de  1 a 10: ');
 
 while (number !== random) {
-    number = +prompt('Guess a number from 1 to 10: ');
+    number = +prompt('Adivinhe um numero de  1 a 10: ');
 }
 
 if (number === random) {
-    console.log('You guessed the correct number.');
+    console.log('Acertou');
 } else if (number > random) {
     console.log("Mais baixo");
 } else if (number < random) {
