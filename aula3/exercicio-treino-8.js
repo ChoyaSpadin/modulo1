@@ -11,17 +11,17 @@ const prompt = require("prompt-sync")();
 const nota = +prompt("Qual a nota [0.0 - 10.00]: ");
 
 if (nota >= 0 && nota <= 10) {
-    if (nota < 6) {
-        console.log(`Sua nota é ${nota} tirou F`);
-    } else if (nota < 7) {
-        console.log(`Sua nota é ${nota} tirou D`);
-    } else if (nota < 8) {
-        console.log(`Sua nota é ${nota} tirou C`);
-    } else if (nota < 9) {
-        console.log(`Sua nota é ${nota} tirou B`);
-    } else {
-        console.log(`Sua nota é ${nota} tirou A`);
-    }
+  if (nota < 6) {
+    console.log(`Sua nota é ${nota} tirou F`);
+  } else if (nota < 7) {
+    console.log(`Sua nota é ${nota} tirou D`);
+  } else if (nota < 8) {
+    console.log(`Sua nota é ${nota} tirou C`);
+  } else if (nota < 9) {
+    console.log(`Sua nota é ${nota} tirou B`);
+  } else {
+    console.log(`Sua nota é ${nota} tirou A`);
+  }
 } else {
-    console.log("Nota inválida!");
+  console.log("Nota inválida!");
 }

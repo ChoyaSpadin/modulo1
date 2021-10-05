@@ -9,28 +9,30 @@
 
 const prompt = require("prompt-sync")();
 
-const escolha = prompt("Digite Celsius ou Farenheit: ")
-console.log("você escolheu", escolha.charAt(0).toUpperCase() + escolha.slice(1))
+const escolha = prompt("Digite Celsius ou Farenheit: ");
+console.log(
+  "você escolheu",
+  escolha.charAt(0).toUpperCase() + escolha.slice(1)
+);
 
 if (escolha === "Celsius" || escolha === "celsius") {
-    cToF(+prompt("Digite a temperatura em Celsius: "));
+  cToF(+prompt("Digite a temperatura em Celsius: "));
 
-    function cToF(celsius) {
-        const cTemp = celsius;
-        const cToFahr = cTemp * 9 / 5 + 32;
-        const message = cTemp + '\xB0C equivale ' + cToFahr + ' \xB0F.';
-        console.log(message);
-    }
+  function cToF(celsius) {
+    const cTemp = celsius;
+    const cToFahr = (cTemp * 9) / 5 + 32;
+    const message = cTemp + "\xB0C equivale " + cToFahr + " \xB0F.";
+    console.log(message);
+  }
 } else if (escolha === "Farenheit" || escolha === "farenheit") {
-    fToC(+prompt("Digite a temperatura em Farenheit: "));
+  fToC(+prompt("Digite a temperatura em Farenheit: "));
 
-    function fToC(fahrenheit) {
-        const fTemp = fahrenheit;
-        const fToCel = (fTemp - 32) * 5 / 9;
-        const message = fTemp + '\xB0F equivale ' + fToCel + '\xB0C.';
-        console.log(message);
-    }
-} else
-{
-    console.log("Digitou errado")
+  function fToC(fahrenheit) {
+    const fTemp = fahrenheit;
+    const fToCel = ((fTemp - 32) * 5) / 9;
+    const message = fTemp + "\xB0F equivale " + fToCel + "\xB0C.";
+    console.log(message);
+  }
+} else {
+  console.log("Digitou errado");
 }

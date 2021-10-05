@@ -3,5 +3,5 @@
 const iterable = "boo";
 
 for (const value of iterable) {
-    console.log(value);
+  console.log(value);
 }

@@ -7,9 +7,9 @@ const prompt = require("prompt-sync")();
 const sexo = prompt("Digite Masculino ou Feminino");
 
 if (sexo.slice(0, 1) === "M" || sexo.slice(0, 1) === "m") {
-    console.log("Masculino")
+  console.log("Masculino");
 } else if (sexo.slice(0, 1) === "F" || sexo === "f") {
-    console.log("Feminino");
+  console.log("Feminino");
 } else {
-    console.log("Você não digitou as letras correta!");
+  console.log("Você não digitou as letras correta!");
 }

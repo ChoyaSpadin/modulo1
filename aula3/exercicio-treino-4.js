@@ -8,7 +8,7 @@ const prompt = require("prompt-sync")();
 const numero = +prompt("Digite o numero: ");
 
 if (numero % 2 === 0) {
-    console.log("The number is even.");
+  console.log("The number is even.");
 } else {
-    console.log("The number is odd.");
+  console.log("The number is odd.");
 }

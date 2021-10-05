@@ -5,12 +5,12 @@ e mostre a área do terreno:
 
 const prompt = require("prompt-sync")();
 
-console.log("Calcule a área")
+console.log("Calcule a área");
 const largura = +prompt("Digite a largura: ");
 const comprimento = +prompt("Digite o comprimento: ");
 
 function area(largura, comprimento) {
-    area = largura* comprimento;
-    console.log("A área é de", area )
+  area = largura * comprimento;
+  console.log("A área é de", area);
 }
-area(largura, comprimento)
+area(largura, comprimento);

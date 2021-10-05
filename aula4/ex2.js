@@ -4,21 +4,20 @@ Escreva um programa que faça o computador “pensar” em um número inteiro en
  pelo computador. O programa deverá escrever na tela se o usuário venceu ou perdeu.
 */
 
-
 const prompt = require("prompt-sync")();
 
 const random = Math.floor(Math.random() * 10) + 1;
 
-let number = +prompt('Adivinhe um numero de  1 a 10: ');
+let number = +prompt("Adivinhe um numero de  1 a 10: ");
 
 while (number !== random) {
-    number = +prompt('Adivinhe um numero de  1 a 10: ');
+  number = +prompt("Adivinhe um numero de  1 a 10: ");
 }
 
 if (number === random) {
-    console.log('Acertou');
+  console.log("Acertou");
 } else if (number > random) {
-    console.log("Mais baixo");
+  console.log("Mais baixo");
 } else if (number < random) {
-    console.log("Mais alto");
+  console.log("Mais alto");
 }

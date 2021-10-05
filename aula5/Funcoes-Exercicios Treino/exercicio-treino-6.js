@@ -3,18 +3,15 @@ expressa em porcentagem e custo, que é o custo de um item antes do imposto. A f
 */
 const prompt = require("prompt-sync")();
 
-const taxa = +prompt("Taxa imposto: ") /100;
+const taxa = +prompt("Taxa imposto: ") / 100;
 let custo = +prompt("Valor do produto: ");
 
-
-
 function somaImposto(taxaImposto, custo) {
-    taxaImposto = taxa / 100
-    console.log(taxa)
-    custo = custo + custo * taxaImposto;
-    return custo
+  taxaImposto = taxa / 100;
+  console.log(taxa);
+  custo = custo + custo * taxaImposto;
+  return custo;
 }
 custo = somaImposto(taxa, custo);
 
 console.log("Resultado:" + custo);
-

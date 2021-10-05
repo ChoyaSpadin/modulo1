@@ -10,4 +10,3 @@
 //     - Excelente escolha! A sala à direita estava te esperando esse tempo todo! Que maravilhoso isso. Pena que não tem nada aqui para você. :(
 //     5 - Caso contrário, se a resposta não foi nenhum dos valores anteriores, exiba a mensagem abaixo e execute a função 'jogo()' novamente.
 // - Você não escolheu nenhuma das portas. Tente novamente.
-

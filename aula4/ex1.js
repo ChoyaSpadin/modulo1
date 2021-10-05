@@ -18,14 +18,17 @@ const prompt = require("prompt-sync")();
 let valorSalario = +prompt("Digite o valor do salário ");
 
 if (valorSalario <= 280) {
-    percentual = 20;
+  percentual = 20;
 } else if (valorSalario <= 700) {
-    percentual = 15;
+  percentual = 15;
 } else if (valorSalario <= 1500) {
-    percentual = 10;
+  percentual = 10;
 } else {
-    percentual = 5;
+  percentual = 5;
 }
 
 console.log("Seu salário é de", valorSalario);
-console.log("Com o reajuste fica",valorSalario + (valorSalario * percentual) / 100);
+console.log(
+  "Com o reajuste fica",
+  valorSalario + (valorSalario * percentual) / 100
+);

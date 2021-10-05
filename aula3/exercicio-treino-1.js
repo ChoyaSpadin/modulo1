@@ -4,5 +4,4 @@
 
 const string = "Os limites só existem se você os deixar existir.(goku)";
 
-
 console.log(string.slice(48, 55));

@@ -6,12 +6,11 @@ Se estivermos interessados no primeiro caractere, faremos assim:
 */
 
 const nome = "Fulano";
-console.log(nome.slice(0, 1))
+console.log(nome.slice(0, 1));
 // retorna a primeira letra, F
 
-
-console.log(nome.slice(0, 3))
+console.log(nome.slice(0, 3));
 // retorna a primeira, a segunda e a terceira letra. Fulano
 
 // Se quisermos do 2º ao 4º caractere, faremos:
-console.log(nome.slice(1, 4))
+console.log(nome.slice(1, 4));

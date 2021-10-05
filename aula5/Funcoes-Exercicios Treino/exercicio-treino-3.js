@@ -4,6 +4,4 @@
 
 const prompt = require("prompt-sync")();
 
-const data = +prompt("Digite a data no fomato DD/MM/AAAA: ")
-
-
+const data = +prompt("Digite a data no fomato DD/MM/AAAA: ");

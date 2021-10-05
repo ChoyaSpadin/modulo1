@@ -6,9 +6,9 @@
 // Segundo valor = 3
 // Soma = 5
 
-const prompt = require("prompt-sync")()
+const prompt = require("prompt-sync")();
 
-const numero1 = parseInt(prompt("Digite o primeiro numero: "))
-const numero2 = parseInt(prompt("Digite o segundo numero: "))
+const numero1 = parseInt(prompt("Digite o primeiro numero: "));
+const numero2 = parseInt(prompt("Digite o segundo numero: "));
 
-console.log(numero1 + numero2)
+console.log(numero1 + numero2);

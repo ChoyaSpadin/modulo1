@@ -18,9 +18,9 @@ Agora implemente a funcionalidade de não aceitar o número 0, no input.
 
 let valor = prompt("Digite o valor: ");
 if (valor === 0) {
-    console.log("Numero inválido");
+  console.log("Numero inválido");
 } else if (valor > 0) {
-    console.log("Valor positivo");
+  console.log("Valor positivo");
 } else {
-    console.log("Valor negativo");
+  console.log("Valor negativo");
 }

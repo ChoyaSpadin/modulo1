@@ -30,4 +30,3 @@ console.log(numero1 + numero2);
 let numerox = 1;
 let numeroy = 2;
 console.log(numerox + numeroy);
-

@@ -4,17 +4,17 @@
 // Defina uma variável que calcula o valor final da idade da pessoa;
 // Exiba uma mensagem final dizendo a idade da pessoa e a mensagem "Você está na flor da idade".
 
-const prompt = require("prompt-sync")()
+const prompt = require("prompt-sync")();
 
-const anoNascimento = parseInt(prompt("Digite seu ano de nascimento: "))
-const anoAtual = parseInt(prompt("Digite ano atual: "))
+const anoNascimento = parseInt(prompt("Digite seu ano de nascimento: "));
+const anoAtual = parseInt(prompt("Digite ano atual: "));
 
-const idade = anoAtual - anoNascimento
+const idade = anoAtual - anoNascimento;
 
-console.log(`Sua idade é: ${idade}.`)
+console.log(`Sua idade é: ${idade}.`);
 
 if (idade >= 50) {
-    console.log("Você está na flor da idade!")
+  console.log("Você está na flor da idade!");
 } else {
-    console.log("Você NÃO está na flor da idade!")
+  console.log("Você NÃO está na flor da idade!");
 }

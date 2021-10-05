@@ -18,9 +18,9 @@ const nome = prompt("Digite seu nome: ");
 const endereco = prompt("Digite seu endereço: ");
 const hobby = prompt("Digite seu Hobby: ");
 
-String.prototype.capitalize = function() {
-    return this.charAt(0).toUpperCase() + this.slice(1);
-}
+String.prototype.capitalize = function () {
+  return this.charAt(0).toUpperCase() + this.slice(1);
+};
 
 console.log(nome.toUpperCase());
 console.log(endereco.toLowerCase());

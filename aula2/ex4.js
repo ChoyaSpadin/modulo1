@@ -8,9 +8,11 @@
 // SÉRGIO     4.5
 // SHIRLEY    7.0
 
-console.log("ALUNO (A)  NOTA\n" +
+console.log(
+  "ALUNO (A)  NOTA\n" +
     "=========  ====\n" +
     "ALINE      9.0\n" +
     "MÁRIO      DEZ\n" +
     "SÉRGIO     4.5\n" +
-    "SHIRLEY    7.0")
+    "SHIRLEY    7.0"
+);
