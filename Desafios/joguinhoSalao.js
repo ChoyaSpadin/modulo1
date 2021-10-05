@@ -10,3 +10,24 @@
 //     - Excelente escolha! A sala à direita estava te esperando esse tempo todo! Que maravilhoso isso. Pena que não tem nada aqui para você. :(
 //     5 - Caso contrário, se a resposta não foi nenhum dos valores anteriores, exiba a mensagem abaixo e execute a função 'jogo()' novamente.
 // - Você não escolheu nenhuma das portas. Tente novamente.
+
+const prompt = require("prompt-sync")();
+
+function jogo() {
+  console.log("Você entrou no salão");
+  console.log("Deseja escolher a porta da direita ou esquerda?");
+  let escolha = prompt("Digite Esquerda ou Direita: ");
+  if (escolha === "Esquerda" || escolha === "esquerda") {
+    console.log(
+      "Você entrou na sala à esquerda, parece que não tem nada por aqui. Acho melhor você voltar correndo!"
+    );
+  } else if (escolha === "Direita" || escolha === "direita") {
+    console.log(
+      "Excelente escolha! A sala à direita estava te esperando esse tempo todo!"
+    );
+  } else {
+    console.log("Você não escolheu nenhuma das portas. Tente novamente.");
+  }
+  // while (escolha !== Direita || escolha !== Esquerda) {}
+}
+jogo();
