@@ -19,5 +19,8 @@
   "homepage": "https://github.com/ChoyaSpadin/modulo1#readme",
   "dependencies": {
     "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    "prettier": "2.4.1"
   }
 }
