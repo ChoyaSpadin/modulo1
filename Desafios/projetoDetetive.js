@@ -13,7 +13,22 @@ const prompt = require("prompt-sync")();
 
 console.log("Responda com Sim ou Não");
 
-let pergunta1 = prompt("Telefonou para a vítima? ");
+function perguntar(pergunta) {
+  const resposta = prompt(pergunta);
+
+  let respostaBool = false;
+
+  if (resposta === "sim") {
+    respostaBool = true;
+    console.log("Texto SIM");
+  } else {
+    console.log("Texto Não");
+  }
+  return respostaBool;
+}
+perguntar(pergunta1);
+
+// let pergunta1 = prompt("Telefonou para a vítima? ");
 let pergunta2 = prompt("Esteve no local do crime? ");
 let pergunta3 = prompt("Mora perto da vítima? ");
 let pergunta4 = prompt("Devia para a vítima? ");

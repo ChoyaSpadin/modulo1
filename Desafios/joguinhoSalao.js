@@ -30,4 +30,3 @@ function jogo() {
   }
   // while (escolha !== Direita || escolha !== Esquerda) {}
 }
-jogo();
