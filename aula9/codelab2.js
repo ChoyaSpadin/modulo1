@@ -5,21 +5,25 @@
 
 const prompt = require("prompt-sync")();
 
-let par = [];
-let impar = [];
+const listaCompletaModelo1 = [];
+const par = [];
+const impar = [];
 
-let user = +prompt("Digite um numero: ");
+for (let i = 0; i < 3; i++) {
+    const numero = +prompt("Digite um número: ");
 
-if (user % 2 === 0) {
-  par.push(user);
-} else {
-  impar.push(user);
+    listaCompletaModelo1.push(numero);
+
+    if (numero % 2 === 0) {
+        par.push(numero);
+    } else {
+        impar.push(numero);
+    }
 }
 
-while (par === []) {
-  +prompt("Digite um numero: ");
-}
+const listaCompletaModelo2 = [...par, ...impar];
 
 console.log("Valores pares: ", par);
 console.log("Valores impares", impar);
-console.log("Lista completa", par + impar);
+console.log("Lista completa 1", listaCompletaModelo1);
+console.log("Lista completa 2", listaCompletaModelo2);
