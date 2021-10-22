@@ -10,13 +10,13 @@ numeros.push(4);
 
 console.log(numeros); // [1, 2, 3, 4]
 
-// numeros.push(5, 6, 7);
-numeros.push(+prompt("Digite Nº: "));
+const numeroDigitado = +prompt("Digite Nº: ");
 
-console.log(numeros);
+// numeros.push(numeroDigitado);
 
-if (numeros.indexOf("") !== -1) {
-  console.log("Tem");
+if (numeros.indexOf(numeroDigitado) !== -1) {
+  console.log("Já existe");
 } else {
-  console.log("Não tem");
+  numeros.push(numeroDigitado);
 }
+console.log(numeros);
