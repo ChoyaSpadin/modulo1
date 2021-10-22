@@ -5,19 +5,44 @@
 
 const prompt = require("prompt-sync")();
 
-let numeros = [1, 2, 3];
-numeros.push(4);
+function getNumeroDigitado() {
+    let numero;
 
-console.log(numeros); // [1, 2, 3, 4]
+    while (typeof numero !== "number" || isNaN(numero)) {
+        const textoDigitado = prompt("Digite Nº: ");
 
-const vezes = 5;
-for (let i = 0; i < vezes; i++) {
-  const numeroDigitado = +prompt("Digite Nº: ");
+        numero = +textoDigitado;
+    }
 
-  if (numeros.indexOf(numeroDigitado) !== -1) {
-    console.log("Já existe");
-  } else {
-    numeros.push(numeroDigitado);
-  }
-  console.log(numeros);
+    return numero;
+}
+
+function programa() {
+    const numeros = [];
+
+    const vezes = getNumeroDigitado();
+
+    for (let i = 0; i < vezes; i++) {
+        const numeroDigitado = getNumeroDigitado();
+
+        if (numeros.indexOf(numeroDigitado) !== -1) {
+            console.log("Já existe");
+        } else {
+            numeros.push(numeroDigitado);
+        }
+    }
+
+    numeros.sort();
+
+    console.log(numeros);
+}
+
+let textoDigitado;
+
+while (textoDigitado !== "q") {
+    programa();
+
+    textoDigitado = prompt(
+        "Pressione enter para continuar ou digite 'q' para sair."
+    );
 }
