@@ -10,13 +10,14 @@ numeros.push(4);
 
 console.log(numeros); // [1, 2, 3, 4]
 
-const numeroDigitado = +prompt("Digite Nº: ");
+const vezes = 5;
+for (let i = 0; i < vezes; i++) {
+  const numeroDigitado = +prompt("Digite Nº: ");
 
-// numeros.push(numeroDigitado);
-
-if (numeros.indexOf(numeroDigitado) !== -1) {
-  console.log("Já existe");
-} else {
-  numeros.push(numeroDigitado);
+  if (numeros.indexOf(numeroDigitado) !== -1) {
+    console.log("Já existe");
+  } else {
+    numeros.push(numeroDigitado);
+  }
+  console.log(numeros);
 }
-console.log(numeros);
