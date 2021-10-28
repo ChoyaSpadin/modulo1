@@ -9,39 +9,38 @@
 
 const prompt = require("prompt-sync")();
 
-function inicia() {
-  var opcao = parseInt(
-    prompt("Qual e a opcao  1 - Papel 2 - Pedra 3 - Tesoura")
-  );
-  var resposta = Math.floor(Math.random() * 3 + 1);
-  var opcaoe = "";
-  var verificador = true;
+function play() {
+  const computador = ["papel", "pedra", "tesoura"];
+  const jogadaComputador =
+    computador[Math.floor(Math.random() * computador.length)];
 
-  if (resposta === 1) {
-    opcaoe += "a resposta e papel";
-  } else if (resposta === 2) {
-    opcaoe += "a resposta e pedra";
-  } else if (resposta === 3) {
-    opcaoe += "a resposta e tesoura";
-  }
+  const jogador1 = prompt("Jogador 1: Digite pedra, papel ou tesoura: ");
+  const jogador2 = prompt(jogadaComputador);
 
-  if (opcao === resposta) {
-    console.log("a resposta e invalida" + opcaoe + ".");
-  } else if (opcao === 1 && resposta === 2) {
-    console.log("a resposta e valida" + opcaoe + ".");
-    inicia();
-  } else if (opcao === 2 && resposta === 1) {
-    console.log("a resposta e invalida" + opcaoe + ".");
-  } else if (opcao === 3 && resposta === 1) {
-    console.log("a resposta e valida" + opcaoe + ".");
-    inicia();
-  } else if (opcao === 3 && resposta === 2) {
-    console.log("a resposta e invalida" + opcaoe + ".");
-  } else if (opcao === 2 && resposta === 3) {
-    console.log("a resposta e valida" + opcaoe + ".");
-    inicia();
-  } else if (opcao === 1 && resposta === 3) {
-    console.log("a resposta e invalida" + opcaoe + ".");
+  if (jogador1 === "pedra") {
+    if (jogador2 === "tesoura") {
+      console.log("Pedra quebra tesoura");
+    } else if (jogador2 === "papel") {
+      console.log("Papel envolve a Pedra");
+    } else if (jogador2 === "pedra") {
+      console.log("Empate");
+    }
+  } else if (jogador1 === "tesoura") {
+    if (jogador2 === "pedra") {
+      console.log("Pedra quebra tesoura");
+    } else if (jogador2 === "papel") {
+      console.log("tesoura corta papel");
+    } else if (jogador2 === "tesoura") {
+      console.log("Empate");
+    }
+  } else if (jogador1 === "papel") {
+    if (jogador2 === "pedra") {
+      console.log("Papel envolve pedra");
+    } else if (jogador2 === "tesoura") {
+      console.log("Tesoura corta papel");
+    } else if (jogador2 === "papel") {
+      console.log("Empate");
+    }
   }
 }
-inicia();
+play();
