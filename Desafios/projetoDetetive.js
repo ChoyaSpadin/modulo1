@@ -11,53 +11,59 @@
 
 const prompt = require("prompt-sync")();
 
-console.log("Responda com Sim ou Não");
+const sherlock = {
+  play: function () {
+    console.log("Responda com Sim ou Não");
 
-function perguntar(pergunta) {
-  const resposta = prompt(pergunta);
+    // function perguntar(pergunta) {
+    //   const resposta = prompt(pergunta);
+    //
+    //   let respostaBool = false;
+    //
+    //   if (resposta === "sim") {
+    //     respostaBool = true;
+    //     console.log("Texto SIM");
+    //   } else {
+    //     console.log("Texto Não");
+    //   }
+    //   return respostaBool;
+    // }
+    // perguntar(pergunta1);
 
-  let respostaBool = false;
+    let pergunta1 = prompt("Telefonou para a vítima? ");
+    let pergunta2 = prompt("Esteve no local do crime? ");
+    let pergunta3 = prompt("Mora perto da vítima? ");
+    let pergunta4 = prompt("Devia para a vítima? ");
+    let pergunta5 = prompt("Já trabalhou com a vítima? ");
 
-  if (resposta === "sim") {
-    respostaBool = true;
-    console.log("Texto SIM");
-  } else {
-    console.log("Texto Não");
-  }
-  return respostaBool;
-}
-perguntar(pergunta1);
+    let sim = 0;
 
-// let pergunta1 = prompt("Telefonou para a vítima? ");
-let pergunta2 = prompt("Esteve no local do crime? ");
-let pergunta3 = prompt("Mora perto da vítima? ");
-let pergunta4 = prompt("Devia para a vítima? ");
-let pergunta5 = prompt("Já trabalhou com a vítima? ");
+    if (pergunta1 === "Sim" || pergunta1 === "sim") {
+      sim += 1;
+    }
+    if (pergunta2 === "Sim" || pergunta2 === "sim") {
+      sim += 1;
+    }
+    if (pergunta3 === "Sim" || pergunta3 === "sim") {
+      sim += 1;
+    }
+    if (pergunta4 === "Sim" || pergunta4 === "sim") {
+      sim += 1;
+    }
+    if (pergunta5 === "Sim" || pergunta5 === "sim") {
+      sim += 1;
+    }
 
-let sim = 0;
+    if (sim === 2) {
+      console.log("Suspeito");
+    } else if (sim === 3 || sim === 4) {
+      console.log("Cúmplice");
+    } else if (sim === 5) {
+      console.log("Culpado");
+    } else {
+      console.log("Inocente");
+    }
+  },
+};
 
-if (pergunta1 === "Sim" || pergunta1 === "sim") {
-  sim += 1;
-}
-if (pergunta2 === "Sim" || pergunta2 === "sim") {
-  sim += 1;
-}
-if (pergunta3 === "Sim" || pergunta3 === "sim") {
-  sim += 1;
-}
-if (pergunta4 === "Sim" || pergunta4 === "sim") {
-  sim += 1;
-}
-if (pergunta5 === "Sim" || pergunta5 === "sim") {
-  sim += 1;
-}
-
-if (sim === 2) {
-  console.log("Suspeito");
-} else if (sim === 3 || sim === 4) {
-  console.log("Cúmplice");
-} else if (sim === 5) {
-  console.log("Culpado");
-} else {
-  console.log("Inocente");
-}
+module.exports = sherlock;

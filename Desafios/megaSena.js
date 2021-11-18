@@ -2,38 +2,44 @@
 // O programa vai perguntar quantos jogos serão gerados e vai sortear 6
 // números entre 1 e 60 para cada jogo, cadastrando tudo em uma lista composta.
 
-// function sorteia() {
-//   return Math.round(Math.random() * 59) + 1;
-// }
+/*
+criar palpites
+receber qntd de jogos
+um jogo tem 6 numeros
+os numeros de cada jogo sao aleatorios
+gerar cada jogo com 6 numeros aleatorios
+adicionar o jogo gerado em uma lista
+ */
 
-function sorteia() {
-  return Math.floor(Math.random() * 60) + 1;
-}
+// const jogo = [15, 32, 35, 14, 1, 6]
+//
+// const listaJogos = []
+//
+// listaJogos.push(jogo)
 
-function sorteiaNumeros() {
-  let megaSena = [];
-  let numero = 1;
-  let quantidadeMaximaDeNumeros = 6;
+// Receber quantidade de jogos
+const prompt = require("prompt-sync")();
+const quantidadeJogos = +prompt("Digite quantidade de jogos: ");
+const listaJogos = [];
 
-  while (numero <= quantidadeMaximaDeNumeros) {
-    let numerosSorteados = sorteia();
-    let achou = false;
+//função do jogo
+function jogo() {
+  const numerosSorteados = [];
 
-    for (posicao = 0; posicao < megaSena.length; posicao++) {
-      if (megaSena[posicao] == numerosSorteados) {
-        achou = true;
-        break;
-      }
+  for (let i = 0; i < 6; i++) {
+    const palpites = Math.floor(Math.random() * 60) + 1;
+    if (numerosSorteados.indexOf(palpites) !== -1) {
+    } else {
+      numerosSorteados.push(palpites);
     }
-
-    if (achou == false) {
-      megaSena.push(numerosSorteados);
-      numero++;
-    }
+    // if (numerosSorteados.indexOf(palpites === numerosSorteados.push(palpites)));
+    // numerosSorteados.push(palpites);
   }
-
-  megaSena.sort(function (a, b) {
-    return a - b;
-  });
-  console.log(megaSena);
+  listaJogos.push(numerosSorteados);
 }
+
+//Quantidade de repetição
+for (let i = 0; i < quantidadeJogos; i++) {
+  jogo();
+}
+console.log(listaJogos);
